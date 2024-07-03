@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendChild</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="../../images/icons8-list-16.png">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>The Element Object</h1>
+        <h2>The appendChild() Method</h2>
+
+        <ul id="myList">
+            <li>Coffee</li>
+            <li>Tea</li>
+        </ul>
+
+        <p>Click "Append" to append an item to the end of the list:</p>
+
+        <fieldset>
+            <legend>Add an item to the list: </legend>
+
+            <input type="text" id="new-item">
+            <br>
+            <br>
+            <label for="">Text Color: </label>
+            <br>
+            <input type="radio" name="color" value="red">
+            <label for="green">Red</label>
+            <input type="radio" name="color" value="green">
+            <label for="green">Green</label>
+            <input type="radio" name="color" value="blue">
+            <label for="green">Blue</label>
+        </fieldset>
+        <br>
+        <button onclick="myFunction()">Append</button>
+
+        <footer>
+            <div>
+                <a href="../../index.html">Voltar a página principal</a>
+            </div>
+            <a target="_blank" href="https://icons8.com/icon/47783/list">List</a> icon by <a target="_blank"
+                href="https://icons8.com">Icons8</a>
+        </footer>
+
+    </div>
+    <script>
+
+        let inputItem = document.getElementById("new-item");
+
+        const clearInputs = () => {
+            inputItem.value = "";
+        }
+
+        function myFunction() {
+
+
+            // Create an "li" node:
+            const node = document.createElement("li");
+            node.setAttribute('id', inputItem.value);
+
+            // Create a text node:
+            const textnode = document.createTextNode(inputItem.value);
+
+            // Append the text node to the "li" node:
+            node.appendChild(textnode);
+
+            // Append the "li" node to the list:
+            document.getElementById("myList").appendChild(node);
+
+            let itemColor = document.querySelector('input[name="color"]:checked').value;
+            let newItem = document.getElementById(inputItem.value);
+
+            if (itemColor == "red") {
+                newItem.style.color = "red";
+            }
+            else if (itemColor == "green") {
+                newItem.style.color = "green";
+            }
+            else if (itemColor == "blue") {
+                newItem.style.color = "blue";
+            }
+
+            // apaga o input digitado
+            clearInputs();
+        }
+    </script>
+
+</body>
+
+</html>

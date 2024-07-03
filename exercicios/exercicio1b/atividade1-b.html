@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1 - b</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="../../images/icons8-teste-16.png">
+</head>
+
+<body>
+    <h1>Atividade 1 - b</h1>
+    <p>Fazendo com os inputs em um form</p>
+
+    <form action="">
+        <fieldset>
+            <legend>Calculadora de média</legend>
+            <label for="nota1">Primeira nota</label><br>
+            <input type="text" id="nota1" placeholder="Digite sua nota"><br>
+            <label for="nota2">Segunda nota</label><br>
+            <input type="text" id="nota2" placeholder="Digite sua nota"><br>
+        </fieldset>
+
+
+    </form>
+    <div>
+        <h2 id="resultado"></h2>
+        <button onclick="calculaMedia()">Calcular</button>
+    </div>
+    <div>
+        <a href="../../index.html">Voltar a página principal</a>
+    </div>
+
+
+    <script>
+
+        const calculaMedia = () => {
+
+            let media, situacao;
+            let nota1 = parseFloat(document.getElementById("nota1").value);
+            let nota2 = parseFloat(document.getElementById("nota2").value);
+
+            console.log(`Nota 1: ${nota1}; Nota2: ${nota2}`);
+
+            media = (nota1 + nota2) / 2;
+
+            console.log(media);
+
+            if (media >= 6) {
+                situacao = "aprovado";
+                document.getElementById("resultado").style.color = "green"
+            }
+            else {
+                situacao = 'reprovado';
+                document.getElementById("resultado").style.color = "red"
+            }
+
+            console.log(situacao);
+
+            document.getElementById("resultado").innerHTML = `Você foi ${situacao}, sua média foi: ${media}`;
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

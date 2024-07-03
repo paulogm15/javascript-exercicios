@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Exercícios</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="/images/icons8-javascript-16.png">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="cabecalho">
+            <div class="perfil">
+                <img class="perfil-foto" src="https://github.com/paulogm15.png" />
+                <div class="titulo">
+                    <h1>Paulo G M Santos</h1>
+                    <h3>Estudante de ADS - Faculdade de Tecnologia e Inovação Senac</h3>
+                </div>
+            </div>
+            <div class="tema">
+                <button onclick="mudarTema()">Alterar tema</button>
+            </div>
+        </header>
+        <h1>Exercícios Javascript</h1>
+        <main class="projects">
+            <ul>
+                <li class="projects-item"><a href="./exercicios/exercicio1/atividade1.html">🔢 Link para atividade
+                        1a</a>
+                </li>
+                <li class="projects-item"><a href="./exercicios/exercicio1b/atividade1-b.html">🧮 Link para atividade
+                        1-b</a></li>
+                <li class="projects-item"><a href="./exercicios/exercicio2/atividade2.html">⚖️ Link para atividade 2</a>
+                </li>
+                <li class="projects-item"><a href="./exercicios/exercicio3/atividade3.html">🧃 Link para atividade 3</a>
+                </li>
+            </ul>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <a target="_blank" href="https://icons8.com/icon/108784/javascript">Javascript</a> ícone por <a target="_blank"
+            href="https://icons8.com">Icons8</a>
+    </footer>
+
+    <script>
+        const mudarTema = () => {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+</body>
+
+</html>

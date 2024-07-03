@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="16x16" rel="icon" href="../../images/icons8-teste-16.png">
+    <title>Atividade 1</title>
+</head>
+
+<body>
+    <h1>Calculadora de média</h1>
+    <h2>Exercicios feito usando prompts</h2>
+    <p>Esse é um péssimo jeito de fazer isso</p>
+
+    <button onclick="calculaMedia()">Calcula média</button><br>
+
+    <a href="../../index.html">Voltar a página principal</a>
+
+    <p><a target="_blank" href="https://icons8.com/icon/26034/test-passed">Teste passado</a> ícone por <a
+            target="_blank" href="https://icons8.com">Icons8</a></p>
+
+
+    <script>
+        const calculaMedia = () => {
+            let nota1, nota2, situação, cor;
+            nota1 = prompt('Digite a primeira nota');
+            nota2 = prompt('Digite a segunda nota');
+
+            let media = (parseInt(nota1) + parseInt(nota2)) / 2;
+
+            if (media >= 6) {
+                situação = "aprovado";
+                cor = "azul";
+            }
+            else {
+                situação = "reprovado";
+                cor = "vermelho";
+            }
+            alert(`Situação: ${situação} com média: ${media}`);
+        }
+
+    </script>
+</body>
+
+</html>
